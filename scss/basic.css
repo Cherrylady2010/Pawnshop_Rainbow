@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans", Raleway;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=basic.css.map */

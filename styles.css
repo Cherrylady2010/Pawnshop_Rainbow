@@ -1,0 +1,219 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.wrapper_max {
+  max-width: 1300px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  color: #518e62;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 52px 34px 52px;
+}
+.header__links {
+  display: flex;
+  align-self: center;
+  gap: 40px;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main__container {
+  background-image: url("./assets/images/green bg.jpg");
+  background-repeat: no-repeat;
+  height: 726px;
+  padding: 141px 0 0 90px;
+}
+
+.main__title {
+  font-size: 96px;
+  color: white;
+  font-style: italic;
+}
+
+.main__description {
+  color: #efefef;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.products {
+  margin-top: 60px;
+}
+
+.products__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.products__imagesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.decoration__img {
+  max-width: 636px;
+}
+
+.decoration {
+  margin-top: 170px;
+}
+
+.decoration__container {
+  display: flex;
+  justify-content: center;
+}
+
+.decoration__greenBlock {
+  background-color: #284f30;
+  padding: 124px 0 0 91px;
+}
+
+.decorative__text {
+  font-weight: 500;
+  font-size: 55px;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  justify-self: center;
+  gap: 36px;
+  margin-top: 61px;
+}
+
+.cardsContainer__title {
+  font-weight: 500;
+  font-size: 43px;
+  text-align: center;
+}
+
+.card {
+  width: 411px;
+  height: 290px;
+  background-image: radial-gradient(circle, #597c5d 30%, #4a694f 70%);
+  border-radius: 15px;
+}
+
+.card__title {
+  color: white;
+  font-size: 36px;
+}
+
+.card__description {
+  color: white;
+  font-size: 20px;
+}
+
+.card__circle {
+  width: 123px;
+  height: 119px;
+  background-color: white;
+  margin: 100px 0 0 46px;
+  border-radius: 100%;
+}
+
+.card__img {
+  width: 100px;
+  height: 100px;
+}
+
+.card__imgContainer {
+  display: flex;
+  padding: 100px 0 0 46px;
+  gap: 38px;
+}
+
+.AboutTheCompany {
+  margin-top: 63px;
+}
+.AboutTheCompany__textContainer {
+  margin-top: 68px;
+  font-size: 25px;
+}
+.AboutTheCompany__title {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+.AboutTheCompany__text {
+  margin-top: 33px;
+}
+.AboutTheCompany__bottomText {
+  margin-top: 66px;
+}
+
+.Adventages {
+  margin-top: 241px;
+}
+.Adventages__container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.Adventages__list {
+  margin-top: 67px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  font-size: 24px;
+}
+.Adventages__list li {
+  position: relative;
+}
+.Adventages__list li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -55px;
+  top: 7px;
+  width: 34px;
+  height: 30px;
+  background: url("./assets/images/Green diamond.png");
+}
+.Adventages__title {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer {
+  border-top: 53px solid #44624a;
+  margin-top: 92px;
+  padding: 21px 0 56px 0;
+}
+.footer__container {
+  display: flex;
+  gap: 52px;
+}
+.footer__bottomContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 105px;
+}
+.footer__line {
+  width: 651px;
+  height: 1px;
+}/*# sourceMappingURL=styles.css.map */

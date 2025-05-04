@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans";
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #518e62;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 52px 34px 52px;
+}
+.header__links {
+  display: flex;
+  align-self: center;
+  gap: 40px;
+  list-style: none;
+}
+.header a {
+  text-decoration: none;
+}
+
+.main__container {
+  background-image: url("./assets/images/green bg.jpg");
+  background-repeat: no-repeat;
+  height: 726px;
+}
+
+.main__title {
+  font-size: 96px;
+  color: white;
+}
+
+.main__description {
+  color: #efefef;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.products {
+  margin-top: 60px;
+}
+
+.products__title {
+  text-align: center;
+}
+
+.products__imagesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 37px;
+  margin-top: 32px;
+}
+
+.decoration {
+  margin-top: 170px;
+}
+
+.decoration__container {
+  display: flex;
+  justify-content: center;
+}
+
+.decoration__greenBlock {
+  background-color: #284f30;
+  height: 532px;
+  width: 685px;
+}
+
+.decorative__text {
+  font-weight: 500;
+  font-size: 55px;
+  color: white;
+}
+
+.card {
+  width: 425px;
+  height: 314px;
+  background-image: radial-gradient(circle, #597c5d 30%, #4a694f 70%);
+}
+
+.card__circle {
+  width: 121px;
+  height: 119px;
+}
+
+.AboutTheCompany__text {
+  margin-top: 33px;
+}
+
+.AboutTheCompany__bottomText {
+  margin-top: 66px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,238 @@
+$green-color: #518e62;
+$dark-green-color: #284f30;
+$color-white: white;
+$color-light-gray: #efefef;
+$color-black: black;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &_max {
+    max-width: 1300px;
+  }
+}
+.logo {
+  font: {
+    size: 24px;
+    weight: 600;
+    style: italic;
+  }
+  color: $green-color;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 52px 34px 52px;
+
+  &__links {
+    display: flex;
+    align-self: center;
+    gap: 40px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+.main__container {
+  background-image: url("./assets/images/green\ bg.jpg");
+  background-repeat: no-repeat;
+  height: 726px;
+  padding: 141px 0 0 90px;
+}
+
+.main__title {
+  font-size: 96px;
+  color: $color-white;
+  font-style: italic;
+}
+
+.main__description {
+  color: $color-light-gray;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.products {
+  margin-top: 60px;
+}
+
+.products__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.products__imagesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.decoration__img {
+  max-width: 636px;
+}
+
+.decoration {
+  margin-top: 170px;
+}
+
+.decoration__container {
+  display: flex;
+  justify-content: center;
+}
+
+.decoration__greenBlock {
+  background-color: $dark-green-color;
+  padding: 124px 0 0 91px;
+}
+
+.decorative__text {
+  font-weight: 500;
+  font-size: 55px;
+  color: $color-white;
+}
+
+.cards {
+  display: flex;
+  justify-self: center;
+  gap: 36px;
+  margin-top: 61px;
+}
+
+.cardsContainer__title {
+  font-weight: 500;
+  font-size: 43px;
+  text-align: center;
+}
+
+.card {
+  width: 411px;
+  height: 290px;
+  background-image: radial-gradient(circle, #597c5d 30%, #4a694f 70%);
+  border-radius: 15px;
+}
+
+.card__title {
+  color: $color-white;
+  font-size: 36px;
+}
+
+.card__description {
+  color: $color-white;
+  font-size: 20px;
+}
+
+.card__circle {
+  width: 123px;
+  height: 119px;
+  background-color: $color-white;
+  margin: 100px 0 0 46px;
+  border-radius: 100%;
+}
+
+.card__img {
+  width: 100px;
+  height: 100px;
+}
+
+.card__imgContainer {
+  display: flex;
+  padding: 100px 0 0 46px;
+  gap: 38px;
+}
+
+.AboutTheCompany {
+  margin-top: 63px;
+
+  &__textContainer {
+    margin-top: 68px;
+    font-size: 25px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__text {
+    margin-top: 33px;
+  }
+
+  &__bottomText {
+    margin-top: 66px;
+  }
+}
+
+.Adventages {
+  margin-top: 241px;
+
+  &__container {
+    @include flex-column;
+    justify-self: center;
+  }
+
+  &__list {
+    margin-top: 67px;
+    @include flex-column;
+    gap: 31px;
+    font-size: 24px;
+    li {
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -55px;
+        top: 7px;
+        width: 34px;
+        height: 30px;
+        background: url("./assets/images/Green\ diamond.png");
+      }
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.footer {
+  border-top: 53px solid #44624a;
+  margin-top: 92px;
+  padding: 21px 0 56px 0;
+
+  &__container {
+    display: flex;
+    gap: 52px;
+  }
+  &__bottomContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 105px;
+  }
+  &__line {
+    width: 651px;
+    height: 1px;
+  }
+}
