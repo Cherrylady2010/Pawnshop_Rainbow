@@ -1,8 +1,19 @@
+//Цвета
 $green-color: #518e62;
 $dark-green-color: #284f30;
 $color-white: white;
 $color-light-gray: #efefef;
 $color-black: black;
+//Брейкпоинты
+$breakpoint-laptop: 1200px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 320px;
+
+@mixin media($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
 
 @mixin flex-column {
   display: flex;
