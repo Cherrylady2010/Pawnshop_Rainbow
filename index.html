@@ -13,19 +13,32 @@
       href="./assets/icons/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./scss/basic.css" />
     <title>Ломбард "Радуга"</title>
   </head>
   <body>
     <header class="header">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span> <span></span> <span></span>
+      </label>
+      <nav class="side-menu">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#products">Продукты</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#why_us">Почему мы?</a></li>
+          <li><a href="#AboutTheCompany">О Компании</a></li>
+          <li><a href="#adventages">Преимущества</a></li>
+        </ul>
+      </nav>
       <h2 class="logo">Ломбард "Радуга"</h2>
       <ul class="header__links">
         <li><a href="#">Главная</a></li>
         <li><a href="#products">Продукты</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Почему мы?</a></li>
-        <li><a href="#">О Компании</a></li>
-        <li><a href="#">Преимущества</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#why_us">Почему мы?</a></li>
+        <li><a href="#AboutTheCompsny">О Компании</a></li>
+        <li><a href="#adventages">Преимущества</a></li>
       </ul>
     </header>
     <main>
@@ -48,32 +61,58 @@
         <div class="wrapper wrapper_max">
           <div class="products__container">
             <h2 class="products__title">Рекомендуемые продукты</h2>
-            <div class="products__imagesContainer">
+            <div class="gallery" id="gallery">
+              <a href="#img1"
+                ><img
+                  src="./assets/images/expensive watch.jpg"
+                  alt="expensive watch"
+                  class="products__img"
+              /></a>
+              <a href="#img2"
+                ><img
+                  src="./assets/images/ring.jpg"
+                  alt="ring"
+                  class="products__img"
+              /></a>
+              <a href="#img3"
+                ><img
+                  src="./assets/images/bracelets.jpg"
+                  alt="bracelets"
+                  class="products__img"
+              /></a>
+              <a href="#img4"
+                ><img
+                  src="./assets/images/necklace.jpg"
+                  alt="necklace"
+                  class="products__img"
+              /></a>
+            </div>
+            <div class="lightbox" id="img1">
+              <a href="#!" class="overlay"></a>
               <img
-                src="./assets/images/expensive watch.jpg"
+                src="./assets/images/expensive-watch-gallery.jpg"
                 alt="expensive watch"
-                class="products__img"
               />
+            </div>
+            <div class="lightbox" id="img2">
+              <a href="#!" class="overlay"></a>
+              <img src="./assets/images/ring-gallery.jpg" alt="ring" />
+            </div>
+            <div class="lightbox" id="img3">
+              <a href="#!" class="overlay"></a>
               <img
-                src="./assets/images/ring.jpg"
-                alt="ring"
-                class="products__img"
-              />
-              <img
-                src="./assets/images/bracelets.jpg"
+                src="./assets/images/bracelets-gallery.jpg"
                 alt="bracelets"
-                class="products__img"
               />
-              <img
-                src="./assets/images/necklace.jpg"
-                alt="necklace"
-                class="products__img"
-              />
+            </div>
+            <div class="lightbox" id="img4">
+              <a href="#!" class="overlay"></a>
+              <img src="./assets/images/necklace-gallery.jpg" alt="necklace" />
             </div>
           </div>
         </div>
       </section>
-      <section class="decoration">
+      <section id="services" class="decoration">
         <div class="wrapper wrapper_max">
           <div class="decoration__container">
             <img
@@ -87,7 +126,7 @@
           </div>
         </div>
       </section>
-      <section class="cards">
+      <section id="why_us" class="cards__section">
         <div class="wrapper wrapper_max">
           <div class="cardsContainer">
             <h2 class="cardsContainer__title">Почему выбирают нас?</h2>
@@ -124,7 +163,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" id="card__three">
                 <div class="card__imgContainer">
                   <img
                     src="./assets/icons/diamond icon.png"
@@ -141,7 +180,7 @@
           </div>
         </div>
       </section>
-      <section class="AboutTheCompany">
+      <section id="AboutTheCompany" class="AboutTheCompany">
         <div class="wrapper wrapper_max">
           <div class="AboutTheCompany__Container">
             <h2 class="AboutTheCompany__title">О Компании</h2>
@@ -168,11 +207,11 @@
           </div>
         </div>
       </section>
-      <section class="Adventages">
+      <section id="adventages" class="Adventages">
         <div class="wrapper wrapper_max">
           <div class="Adventages__container">
             <h2 class="Adventages__title">
-              Основные преимуцества компании<br />
+              Основные преимущества компании<br />
               Ломбард “Радуга”
             </h2>
             <ul class="Adventages__list">
@@ -201,7 +240,7 @@
                 с клиентами.
               </li>
             </ul>
-            <p class="">
+            <p class="Adventages__bottomText">
               Компания принимает в залог золото любых проб, в любом состоянии, в
               частности 375, 583, 585, 750, 850, 900, 999
             </p>
@@ -212,17 +251,17 @@
     <footer class="footer">
       <div class="wrapper wrapper_max">
         <div class="footer__container">
-          <div>
-            <h2>Ломбард “Радуга”</h2>
+          <div class="footer__logoContainer">
+            <h2 class="footer__logo">Ломбард “Радуга”</h2>
             <p>
               Краткосрочный заём под залог ювелирных<br />
               украшений предоставляется при наличии<br />
               документа, подтверждающего личность заемщика.
             </p>
           </div>
-          <div>
+          <div class="footer__listsContainer">
             <h2>Быстрые Ссылки</h2>
-            <ul>
+            <ul class="footer__list">
               <li><a href="#">Главная</a></li>
               <li><a href="#">Продукты</a></li>
               <li><a href="#">Услуги</a></li>
@@ -230,26 +269,30 @@
               <li><a href="#">О нас</a></li>
             </ul>
           </div>
-          <div>
-            <h2 class="address">Адрес</h2>
-            <p>
+          <div class="adress__container">
+            <h2 class="addressTitle">Адрес</h2>
+            <p class="address">
               Краснодарский Край,<br />
               город Славянск-На-Кубани<br />
               ул. Красная 1 (Цокольный этаж)
             </p>
-            <p>Номер телефона:</p>
-            <a href="tel:+79184897429">+79184897429</a>
+            <p class="phoneNumberTitle">Номер телефона:</p>
+            <a href="tel:+79184897429" class="phoneNumber">+7 918 489 7429</a>
           </div>
-          <div>
+          <div class="schedule__container">
             <h2>Расписание</h2>
-            <p>Пн - выходной</p>
-            <p>В будние дни - С 9 до 16</p>
-            <p>Сб, Вс - с 9 до 15</p>
+            <div class="schedule">
+              <p>Пн - выходной</p>
+              <p>В будние дни - С 9 до 16</p>
+              <p>Сб, Вс - с 9 до 15</p>
+            </div>
           </div>
         </div>
         <div>
           <div class="footer__bottomContainer">
-            <p>©2002-2025г. Ломбард “Радуга”. Все права защищены</p>
+            <p class="copyright">
+              ©2002-2025г. Ломбард “Радуга”. Все права защищены
+            </p>
             <hr class="footer__line" />
           </div>
         </div>
