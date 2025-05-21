@@ -21,7 +21,6 @@ a {
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 7px;
 }
 @media (max-width: 320px) {
   .wrapper {
@@ -82,6 +81,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -97,13 +97,17 @@ a {
   display: flex;
 }
 #menu-toggle:checked + .menu-icon span:nth-child(1) {
-  transform: rotate(45deg) translateY(10px);
+  transform: rotate(45deg) translateY(11px);
+  background: #d2e8cb;
+  width: 20px;
 }
 #menu-toggle:checked + .menu-icon span:nth-child(2) {
   opacity: 0;
 }
 #menu-toggle:checked + .menu-icon span:nth-child(3) {
   transform: rotate(-45deg) translateY(-11px);
+  background: #d2e8cb;
+  width: 20px;
 }
 
 .menu-icon {
@@ -115,39 +119,50 @@ a {
   height: 25px;
   width: 30px;
   z-index: 1;
+  position: relative;
+  left: 8px;
+  top: -6px;
 }
 .menu-icon span {
   display: block;
   height: 3px;
-  background: #000;
+  width: 33px;
   border-radius: 2px;
   transition: 0.3s;
+  background-color: black;
 }
 
 .side-menu {
   display: none;
   position: absolute;
+  border: 2px solid #44624a;
+  border-top: 29px solid #44624a;
+  border-radius: 10px;
+  background-color: #6d8764;
   top: 24px;
   left: 34px;
-  background-color: #edf1f5;
   width: 250px;
+  height: 311px;
   padding: 20px;
   flex-direction: column;
 }
 .side-menu ul {
   list-style: none;
-  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
 }
 .side-menu ul li {
   margin-bottom: 15px;
 }
 .side-menu ul li a {
   text-decoration: none;
-  font-weight: bold;
-  color: #000;
+  font-weight: 400;
+  color: #fbfff9;
 }
 .side-menu ul li a:hover {
-  color: #518e62;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -316,23 +331,23 @@ a {
 }
 
 .decoration__greenBlock {
-  background-color: #284f30;
-  padding: 124px 50px 0 50px;
+  align-self: center;
 }
-@media (max-width: 1200px) {
-  .decoration__greenBlock {
-    padding: 100px 10px;
+.greenBlockContainer {
+  display: flex;
+  justify-content: center;
+  width: 657px;
+  background-color: #284f30;
+}
+@media (max-width: 1024px) {
+  .greenBlockContainer {
     max-width: 400px;
+    height: 290px;
   }
 }
 @media (max-width: 425px) {
-  .decoration__greenBlock {
+  .greenBlockContainer {
     max-width: 300px;
-  }
-}
-@media (max-width: 992px) {
-  .decoration__greenBlock {
-    padding-left: 55px;
   }
 }
 
@@ -349,6 +364,11 @@ a {
 @media (max-width: 992px) {
   .decorative__text {
     font-size: 34px;
+  }
+}
+@media (max-width: 425px) {
+  .decorative__text {
+    font-size: 30px;
   }
 }
 
@@ -391,6 +411,9 @@ a {
 }
 
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 411px;
   height: 290px;
   background-image: radial-gradient(circle, #597c5d 30%, #4a694f 70%);
@@ -430,6 +453,20 @@ a {
   color: white;
   font-size: 20px;
 }
+@media (max-width: 425px) {
+  .card__description {
+    font-size: 16px;
+  }
+}
+
+.card__textContainer {
+  width: 200px;
+}
+@media (max-width: 425px) {
+  .card__textContainer {
+    width: 165px;
+  }
+}
 
 .card__circle {
   width: 123px;
@@ -443,15 +480,20 @@ a {
   width: 100px;
   height: 100px;
 }
+@media (max-width: 425px) {
+  .card__img {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 .card__imgContainer {
   display: flex;
-  padding: 100px 0 0 46px;
+  justify-content: center;
   gap: 38px;
 }
 @media (max-width: 425px) {
   .card__imgContainer {
-    padding: 50px 0 0 6px;
     gap: 20px;
   }
 }
@@ -459,6 +501,7 @@ a {
 .AboutTheCompany {
   margin-top: 63px;
   font-weight: 500;
+  padding-left: 40px;
 }
 .AboutTheCompany__textContainer {
   margin-top: 68px;
@@ -477,13 +520,14 @@ a {
 }
 
 .Adventages {
-  margin-top: 148px;
+  margin-top: 80px;
   font-weight: 500;
 }
 .Adventages__container {
   display: flex;
   flex-direction: column;
   justify-self: center;
+  padding-left: 40px;
 }
 .Adventages__list {
   margin-top: 67px;
@@ -491,19 +535,6 @@ a {
   flex-direction: column;
   gap: 31px;
   font-size: 24px;
-}
-.Adventages__list li {
-  position: relative;
-}
-.Adventages__list li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -55px;
-  top: 7px;
-  width: 34px;
-  height: 30px;
-  background: url("./assets/images/Green diamond.png");
 }
 .Adventages__title {
   font-size: 40px;
@@ -520,27 +551,30 @@ a {
   font-size: 25px;
 }
 
+.diamomd__container {
+  display: flex;
+  gap: 42px;
+}
+
+.diamond {
+  width: 34px;
+  height: 30px;
+}
+
 .footer {
   border-top: 53px solid #44624a;
   margin-top: 92px;
-  padding: 21px 0 56px 0;
+  padding: 21px 40px 56px 40px;
 }
 .footer__container {
   display: flex;
-  gap: 50px;
-}
-@media (max-width: 1400px) {
-  .footer__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    justify-content: center;
-  }
+  gap: 40px;
+  justify-content: center;
 }
 @media (max-width: 1024px) {
   .footer__container {
-    grid-template-columns: 1fr;
-    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
   }
 }
 .footer__logo {
@@ -551,10 +585,9 @@ a {
     display: none;
   }
 }
-@media (max-width: 1024px) {
-  .footer__listsContainer {
-    text-align: center;
-  }
+.footer__listsContainer {
+  display: flex;
+  flex-direction: column;
 }
 .footer__list {
   display: flex;
@@ -564,9 +597,25 @@ a {
   font-weight: 500;
   margin-top: 20px;
 }
+@media (max-width: 1200px) {
+  .footer__list {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 90px 120px;
+  }
+}
+@media (max-width: 1024px) {
+  .footer__list {
+    align-self: center;
+    justify-content: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
 .footer__bottomContainer {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 30px;
   margin-top: 105px;
 }
@@ -584,6 +633,12 @@ a {
   .footer__line {
     width: auto;
     margin-top: 25px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .quick__links {
+    text-align: center;
   }
 }
 
@@ -615,6 +670,10 @@ a {
 
 .schedule__container {
   justify-self: center;
+}
+
+.scheduleTitle {
+  text-align: center;
 }
 
 .schedule {

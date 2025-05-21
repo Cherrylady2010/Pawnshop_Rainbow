@@ -1,8 +1,12 @@
 @import "scss/basic";
 
 //Цвета
+$color-lightest-green: #fbfff9;
+$color-light-green: #d2e8cb;
 $green-color: #518e62;
 $dark-green-color: #284f30;
+$color-light-khaki: #6d8764;
+$color-khaki: #44624a;
 $color-white: white;
 $color-light-gray: #efefef;
 $color-gray: #c5c5c5;
@@ -40,7 +44,6 @@ a {
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 7px;
 
   @include media($breakpoint-mobile) {
     max-width: 320px;
@@ -91,6 +94,7 @@ a {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      text-align: center;
     }
     @include media($breakpoint-tablet) {
       display: none;
@@ -103,13 +107,17 @@ a {
     display: flex;
   }
   &:checked + .menu-icon span:nth-child(1) {
-    transform: rotate(45deg) translateY(10px);
+    transform: rotate(45deg) translateY(11px);
+    background: $color-light-green;
+    width: 20px;
   }
   &:checked + .menu-icon span:nth-child(2) {
     opacity: 0;
   }
   &:checked + .menu-icon span:nth-child(3) {
     transform: rotate(-45deg) translateY(-11px);
+    background: $color-light-green;
+    width: 20px;
   }
 }
 .menu-icon {
@@ -121,35 +129,45 @@ a {
   height: 25px;
   width: 30px;
   z-index: 1;
+  position: relative;
+  left: 8px;
+  top: -6px;
   span {
     display: block;
     height: 3px;
-    background: #000;
+    width: 33px;
     border-radius: 2px;
     transition: 0.3s;
+    background-color: black;
   }
 }
 .side-menu {
   display: none;
   position: absolute;
+  border: 2px solid $color-khaki;
+  border-top: 29px solid $color-khaki;
+  border-radius: 10px;
+  background-color: $color-light-khaki;
   top: 24px;
   left: 34px;
-  background-color: #edf1f5;
   width: 250px;
+  height: 311px;
   padding: 20px;
   flex-direction: column;
   ul {
     list-style: none;
-    padding: 20px 50px;
+    @include flex-column;
+    gap: 7px;
+    text-align: center;
     li {
       margin-bottom: 15px;
       a {
         text-decoration: none;
-        font-weight: bold;
-        color: #000;
+        font-weight: 400;
+        color: $color-lightest-green;
       }
       a:hover {
-        color: #518e62;
+        color: #ffffff;
       }
     }
   }
@@ -300,17 +318,22 @@ a {
 }
 
 .decoration__greenBlock {
-  background-color: $dark-green-color;
-  padding: 124px 50px 0 50px;
+  align-self: center;
   @include media($breakpoint-laptop) {
-    padding: 100px 10px;
+  }
+}
+
+.greenBlockContainer {
+  display: flex;
+  justify-content: center;
+  width: 657px;
+  background-color: $dark-green-color;
+  @include media($breakpoint-laptop-S) {
     max-width: 400px;
+    height: 290px;
   }
   @include media($breakpoint-mobile-L) {
     max-width: 300px;
-  }
-  @include media(992px) {
-    padding-left: 55px;
   }
 }
 
@@ -323,6 +346,9 @@ a {
   }
   @include media(992px) {
     font-size: 34px;
+  }
+  @include media($breakpoint-mobile-L) {
+    font-size: 30px;
   }
 }
 
@@ -357,6 +383,9 @@ a {
 }
 
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 411px;
   height: 290px;
   background-image: radial-gradient(circle, #597c5d 30%, #4a694f 70%);
@@ -389,6 +418,16 @@ a {
 .card__description {
   color: $color-white;
   font-size: 20px;
+  @include media($breakpoint-mobile-L) {
+    font-size: 16px;
+  }
+}
+
+.card__textContainer {
+  width: 200px;
+  @include media($breakpoint-mobile-L) {
+    width: 165px;
+  }
 }
 
 .card__circle {
@@ -402,14 +441,17 @@ a {
 .card__img {
   width: 100px;
   height: 100px;
+  @include media($breakpoint-mobile-L) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .card__imgContainer {
   display: flex;
-  padding: 100px 0 0 46px;
+  justify-content: center;
   gap: 38px;
   @include media($breakpoint-mobile-L) {
-    padding: 50px 0 0 6px;
     gap: 20px;
   }
 }
@@ -417,6 +459,7 @@ a {
 .AboutTheCompany {
   margin-top: 63px;
   font-weight: 500;
+  padding-left: 40px;
 
   &__textContainer {
     margin-top: 68px;
@@ -439,12 +482,13 @@ a {
 }
 
 .Adventages {
-  margin-top: 148px;
+  margin-top: 80px;
   font-weight: 500;
 
   &__container {
     @include flex-column;
     justify-self: center;
+    padding-left: 40px;
   }
 
   &__list {
@@ -452,19 +496,6 @@ a {
     @include flex-column;
     gap: 31px;
     font-size: 24px;
-    li {
-      position: relative;
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: -55px;
-        top: 7px;
-        width: 34px;
-        height: 30px;
-        background: url("./assets/images/Green\ diamond.png");
-      }
-    }
   }
 
   &__title {
@@ -482,22 +513,27 @@ a {
   }
 }
 
+.diamomd__container {
+  display: flex;
+  gap: 42px;
+}
+
+.diamond {
+  width: 34px;
+  height: 30px;
+}
+
 .footer {
   border-top: 53px solid #44624a;
   margin-top: 92px;
-  padding: 21px 0 56px 0;
+  padding: 21px 40px 56px 40px;
   &__container {
     display: flex;
-    gap: 50px;
-    @include media($breakpoint-laptop-L) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
-      justify-content: center;
-    }
+    gap: 40px;
+    justify-content: center;
     @include media($breakpoint-laptop-S) {
-      grid-template-columns: 1fr;
-      justify-content: center;
+      flex-direction: column;
+      justify-self: center;
     }
   }
 
@@ -512,9 +548,7 @@ a {
   }
 
   &__listsContainer {
-    @include media($breakpoint-laptop-S) {
-      text-align: center;
-    }
+    @include flex-column;
   }
 
   &__list {
@@ -523,11 +557,22 @@ a {
     font-size: 18px;
     font-weight: 500;
     margin-top: 20px;
+    @include media($breakpoint-laptop) {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 90px 120px;
+    }
+    @include media($breakpoint-laptop-S) {
+      align-self: center;
+      justify-content: center;
+      column-gap: 20px;
+    }
   }
 
   &__bottomContainer {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 30px;
     margin-top: 105px;
     @include media($breakpoint-tablet) {
@@ -542,6 +587,12 @@ a {
       width: auto;
       margin-top: 25px;
     }
+  }
+}
+
+.quick__links {
+  @include media($breakpoint-laptop-L) {
+    text-align: center;
   }
 }
 
@@ -573,6 +624,10 @@ a {
 
 .schedule__container {
   justify-self: center;
+}
+
+.scheduleTitle {
+  text-align: center;
 }
 
 .schedule {
